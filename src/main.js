@@ -153,7 +153,7 @@ function updateTargets() {
     for (let shot of shots) {
         if (!shot.isOn)
             continue;
-            
+
         entities.forEach((alien) => {
             if (alien.pointIsIn(shot.position)) {
                 alien.isOn = false;
@@ -175,7 +175,7 @@ function animate() {
     }, 100);
 }
 
-// Player movement
+// Player movement and shot animation
 window.addEventListener('keydown', (event) => {
     if (event.defaultPrevented) {
         return; // Do nothing if the event was already processed

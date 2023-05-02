@@ -4,7 +4,7 @@
 
 Built with Javascript, using the HTML Canvas API.
 
-Only the basic logic of the game, no rela gameplay yet.
+Only the basic logic of the game, no real gameplay yet.
 
 Player, and enemy movement OK.
 Player can shoot, and the aliens disappear when hit.

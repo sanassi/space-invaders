@@ -24,7 +24,7 @@ class Entity {
     draw() {
         if (!this.isOn)
             return;
-            
+
         for (let i = 0; i < this.points.length; i++)
             for (let j = 0; j < this.points[i].length; j++)
                 if (this.points[i][j] !== 0)
@@ -151,9 +151,13 @@ function moveShots() {
 
 function updateTargets() {
     for (let shot of shots) {
+        if (!shot.isOn)
+            continue;
+            
         entities.forEach((alien) => {
             if (alien.pointIsIn(shot.position)) {
                 alien.isOn = false;
+                shot.isOn = false;
             }
         })
     }
